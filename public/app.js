@@ -4,7 +4,7 @@ if ('serviceWorker' in navigator) {
         .catch(err => console.log('Ошибка SW:', err));
 }
 
-const socket = io();
+const socket = io('https://onrender.com');
 
 // Элементы DOM
 const messageForm = document.getElementById('message-form');
