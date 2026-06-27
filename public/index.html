@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Левая панель (Настройки профиля) -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <h3>Настройки профиля</h3>
+                <div class="avatar-preview-container">
+                    <img id="current-avatar" src="https://hiclipart.com" alt="Avatar">
+                </div>
+                <input type="text" id="username-input" placeholder="Ваше имя" value="User">
+                <input type="text" id="avatar-url-input" placeholder="Ссылка на URL аватарки">
+                <button id="save-profile-btn">Сохранить</button>
+            </div>
+            <div class="chats-list">
+                <div class="chat-item active">
+                    <div class="chat-item-avatar">📢</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Общий чат</div>
+                        <div class="chat-item-last">Все пользователи тут</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая панель (Окно чата) -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-title">Общий чат</div>
+                <div class="chat-header-status">онлайн через WebSocket</div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Сообщения будут появляться здесь -->
+            </div>
+            <form class="chat-input-container" id="message-form">
+                <input type="text" id="message-input" placeholder="Напишите сообщение..." autocomplete="off" required>
+                <button type="submit" id="send-btn">➤</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем Socket.io с клиента -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
