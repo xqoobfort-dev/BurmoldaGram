@@ -1,0 +1,16 @@
+{
+  "short_name": "BurmoldaGram",
+  "name": "BurmoldaGram Web Messenger",
+  "icons": [
+    {
+      "src": "https://hiclipart.com",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#e7ebf0",
+  "theme_color": "#3390ec",
+  "display": "standalone",
+  "orientation": "portrait"
+}
