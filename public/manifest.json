@@ -8,7 +8,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://onrender.com",
   "background_color": "#e7ebf0",
   "theme_color": "#3390ec",
   "display": "standalone",
