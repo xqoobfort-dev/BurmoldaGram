@@ -3,8 +3,8 @@
   "name": "BurmoldaGram Web Messenger",
   "icons": [
     {
-      "src": "https://hiclipart.com",
-      "type": "image/jpg",
+      "src": "/icon.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
