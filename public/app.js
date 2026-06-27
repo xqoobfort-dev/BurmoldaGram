@@ -1,3 +1,9 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Service Worker зарегистрирован!'))
+        .catch(err => console.log('Ошибка SW:', err));
+}
+
 const socket = io();
 
 // Элементы DOM
@@ -82,8 +88,3 @@ socket.on('chat-history', (history) => {
 socket.on('receive-message', (msg) => {
     appendMessage(msg);
 });
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-        .then(() => console.log('Service Worker успешно зарегистрирован!'))
-        .catch(err => console.log('Ошибка SW:', err));
-}
